@@ -31,6 +31,9 @@ class FilmsRepositoryTest {
         repo.save(film3);
         repo.findById(3);
 
+        filmItem expected = film3;
+        filmItem actual = repo.findById(3);
+        Assertions.assertEquals(expected, actual);
 
     }
     @Test

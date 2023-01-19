@@ -9,24 +9,26 @@ public class FilmsRepository {
         tmp[tmp.length - 1] = item;
         films = tmp;
     }
+
     public filmItem[] findAll() {
         return films;
     }
 
-    public void findById(int id) {
-        filmItem[] tmp = new filmItem[films.length - 1];
+    public filmItem findById(int id) {
+        filmItem[] tmp = new filmItem[films.length];
         for (filmItem film : films) {
-            if (film.getId() = id) {
-                return filmItem[];
+            if (film.getId() == id) {
+                return film;
             }
         }
-
+        return null;
     }
+
     public void removeById(int id) {
         filmItem[] tmp = new filmItem[films.length - 1];
         int copyToIndex = 0;
         for (filmItem film : films) {
-            if(film.getId() != id) {
+            if (film.getId() != id) {
                 tmp[copyToIndex] = film;
                 copyToIndex++;
             }
