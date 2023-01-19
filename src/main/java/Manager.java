@@ -1,5 +1,5 @@
 import java.io.File;
-
+import static org.mockito.Mockito.*;
 public class Manager {
     private String[] films = new String[0];
     private int limit;
